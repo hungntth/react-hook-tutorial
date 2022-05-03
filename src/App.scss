@@ -1,22 +1,28 @@
-.App {
+button{
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .App {
   /* text-align: center; */
   padding: 20px;
   font-size: 14px;
   background-color: #282c34;
   height: calc(110vh - 80px);
   display: flex;
-}
-.content-right{
-  color: white;
-  width: 50%;
-  padding: 16px;
-  margin: 10px;
+
+  .content-right{
+    color: white;
+    width: 80%;
+    padding: 16px;
+    margin: 10px;
+  }
+  
+  .content-left{
+    width: 20%;
+    padding: 10px;
+  }
 }
 
-.content-left{
-  width: 50%;
-  
-}
 
 .App-logo {
   height: 10vmin;

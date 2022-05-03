@@ -1,7 +1,9 @@
-import './App.css';
-import logo from './logo.svg';
-import Home from './components/Home'
+import './App.scss';
 import AddNewProduct from './components/AddNewProduct';
+import Home from './components/Home';
+import Product from './components/Products/Product';
+import logo from './logo.svg';
+import 'react-image-lightbox/style.css';
 
 
 
@@ -18,6 +20,8 @@ function App() {
       </header>
       <div className='content-right'>
         <AddNewProduct />
+        <hr />
+        <Product />
       </div>
     </div>
   );
