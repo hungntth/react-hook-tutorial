@@ -1,11 +1,11 @@
 import { React, useState } from "react";
+import Lightbox from "react-image-lightbox";
 import iphone13_black from "../../assets/images/iphone13-black.jpg";
 import iphone13_blue from "../../assets/images/iphone13-blue.jpg";
 import iphone13_green from "../../assets/images/iphone13-green.jpg";
 import iphone13_pink from "../../assets/images/iphone13-pink.jpg";
 import iphone13_white from "../../assets/images/iphone13-white.jpg";
 import "./Product.scss";
-import Lightbox from "react-image-lightbox";
 Product.propTypes = {};
 
 const images = [
@@ -30,18 +30,21 @@ function Product(props) {
         <div className="product-container">
             <div className="content-left">
                 <div className="img-up">
-                    <img src={currentUpImage} onClick={() => handleClickPreviewImg()} />
+                    <img alt="" src={currentUpImage} onClick={() => handleClickPreviewImg()} />
                 </div>
                 <div className="img-down">
                     <div className="img-small">
                         <img
+                            alt=""
                             src={iphone13_black}
                             onClick={() => setCurrentUpImage(iphone13_black)}
                             className={currentUpImage === iphone13_black ? "active" : ""}
                         />
                     </div>
                     <div className="img-small">
+
                         <img
+                            alt=""
                             src={iphone13_white}
                             onClick={() => setCurrentUpImage(iphone13_white)}
                             className={currentUpImage === iphone13_white ? "active" : ""}
@@ -49,6 +52,7 @@ function Product(props) {
                     </div>
                     <div className="img-small">
                         <img
+                            alt=""
                             src={iphone13_pink}
                             onClick={() => setCurrentUpImage(iphone13_pink)}
                             className={currentUpImage === iphone13_pink ? "active" : ""}
@@ -56,6 +60,7 @@ function Product(props) {
                     </div>
                     <div className="img-small">
                         <img
+                            alt=""
                             src={iphone13_blue}
                             onClick={() => setCurrentUpImage(iphone13_blue)}
                             className={currentUpImage === iphone13_blue ? "active" : ""}
@@ -63,6 +68,7 @@ function Product(props) {
                     </div>
                     <div className="img-small">
                         <img
+                            alt=""
                             src={iphone13_green}
                             onClick={() => setCurrentUpImage(iphone13_green)}
                             className={currentUpImage === iphone13_green ? "active" : ""}
@@ -77,7 +83,7 @@ function Product(props) {
                 <div className="price">20.450.000 ₫</div>
                 <div className="color">Màu: Đen</div>
                 <div className="action">
-                    <input type="number" min={1} value={1} className="quantity" />
+                    <input type="number" min={1} defaultValue={1} className="quantity" />
                     <button className="buy">Chọn mua</button>
                 </div>
             </div>
